@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孩子沒有方向，不代表沒有未來｜高苑工商</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E3550;
+    --navy-light: #2C4A6B;
+    --orange: #E07B39;
+    --orange-light: #F5A06A;
+    --orange-pale: #FFF3E8;
+    --green: #5A8A6A;
+    --green-light: #A8C5A0;
+    --green-pale: #F0F8F0;
+    --cream: #FAF6F1;
+    --warm-white: #FDF9F5;
+    --charcoal: #3A3A3A;
+    --gray: #7A7A7A;
+    --gray-light: #E8E4DF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 48px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 6px;
+    background: var(--orange);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -120px; top: -120px;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    border: 80px solid rgba(255,255,255,0.03);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--orange-light);
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: clamp(36px, 6vw, 72px);
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 span {
+    color: var(--orange-light);
+    display: block;
+  }
+
+  .hero-divider {
+    width: 80px; height: 4px;
+    background: var(--orange);
+    margin: 32px 0;
+    border-radius: 2px;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    max-width: 540px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+
+  .hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-nav a {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s;
+  }
+
+  .hero-nav a:hover {
+    border-color: var(--orange);
+    color: var(--orange-light);
+    background: rgba(224,123,57,0.1);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px; right: 48px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-scroll::before {
+    content: '';
+    width: 40px; height: 1px;
+    background: rgba(255,255,255,0.2);
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-wrap {
+    padding: 80px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .section-sub {
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 48px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    background: var(--navy);
+    padding: 56px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--orange);
+  }
+
+  .section-divider .emoji {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-divider h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(22px, 4vw, 36px);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .section-divider p {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+  }
+
+  /* ── Q&A CARDS ── */
+  .qa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+    margin-top: 0;
+  }
+
+  .qa-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(44,74,107,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+
+  .qa-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--orange);
+  }
+
+  .qa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(44,74,107,0.14);
+  }
+
+  .qa-card-header {
+    background: var(--navy);
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .qa-q-badge {
+    width: 28px; height: 28px;
+    background: var(--orange);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .qa-question {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .qa-body {
+    padding: 24px;
+  }
+
+  .qa-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+
+  .qa-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .qa-text {
+    font-size: 13.5px;
+    color: var(--charcoal);
+    line-height: 1.7;
+  }
+
+  .qa-text.direction {
+    color: var(--gray);
+    font-size: 13px;
+  }
+
+  .qa-comfort {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: var(--orange-pale);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--orange);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* ── MYTH CARDS ── */
+  .myth-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .myth-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(44,74,107,0.07);
+    transition: transform 0.3s;
+  }
+
+  .myth-card:hover { transform: translateY(-3px); }
+
+  .myth-header {
+    background: var(--navy);
+    padding: 12px 16px;
+    position: relative;
+  }
+
+  .myth-header::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--orange);
+  }
+
+  .myth-num {
+    font-size: 10px;
+    color: var(--orange-light);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .myth-wrong {
+    padding: 14px 16px;
+    background: #FFF8F3;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--charcoal);
+  }
+
+  .myth-wrong::before { content: '❌ '; }
+
+  .myth-truth {
+    padding: 14px 16px;
+    font-size: 12.5px;
+    color: var(--charcoal);
+    line-height: 1.65;
+    border-left: 3px solid var(--green);
+    background: var(--green-pale);
+  }
+
+  .myth-truth::before {
+    content: '✅ ';
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  /* ── TRAITS TABLE ── */
+  .trait-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
+  }
+
+  .trait-row {
+    display: grid;
+    grid-template-columns: 160px 24px 1fr;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(44,74,107,0.07);
+    transition: transform 0.2s;
+  }
+
+  .trait-row:hover { transform: translateX(4px); }
+
+  .trait-label {
+    background: var(--navy);
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .trait-arrow {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    color: var(--orange);
+    font-weight: 900;
+    background: var(--orange-pale);
+    height: 100%;
+  }
+
+  .trait-dir {
+    padding: 10px 16px;
+  }
+
+  .trait-dir strong {
+    display: block;
+    font-size: 13px;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .trait-dir span {
+    font-size: 11px;
+    color: var(--gray);
+  }
+
+  /* ── STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .story-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(44,74,107,0.08);
+    transition: transform 0.3s;
+  }
+
+  .story-card:hover { transform: translateY(-4px); }
+
+  .story-header {
+    background: var(--navy);
+    padding: 20px 24px;
+    border-left: 5px solid var(--orange);
+  }
+
+  .story-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--orange-light);
+    margin-bottom: 4px;
+  }
+
+  .story-subtitle {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .story-body {
+    padding: 24px;
+    font-size: 13.5px;
+    color: var(--charcoal);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  .story-comfort {
+    margin: 0 24px 24px;
+    padding: 12px 16px;
+    background: var(--orange-pale);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--orange);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: var(--navy);
+    padding: 80px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--orange);
+  }
+
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    right: -80px; bottom: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 60px solid rgba(255,255,255,0.03);
+    pointer-events: none;
+  }
+
+  .cta-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .cta-title em {
+    color: var(--orange-light);
+    font-style: normal;
+  }
+
+  .cta-sub {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    position: relative;
+  }
+
+  .cta-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .cta-card:hover {
+    background: rgba(224,123,57,0.15);
+    border-color: var(--orange);
+    transform: translateY(-4px);
+  }
+
+  .cta-card-icon { font-size: 36px; margin-bottom: 16px; }
+
+  .cta-card-bar {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .cta-card-bar.green { background: var(--green); }
+  .cta-card-bar.navy { background: var(--navy-light); }
+  .cta-card-bar.orange { background: var(--orange); }
+  .cta-card-bar.dark { background: #2A5A3A; }
+
+  .cta-card-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  /* ── CTA NAMES ── */
+  .cta-names-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+
+  .cta-name-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 10px rgba(44,74,107,0.07);
+    transition: transform 0.2s;
+  }
+
+  .cta-name-item:hover { transform: translateX(4px); }
+
+  .cta-name-num {
+    width: 28px; height: 28px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .cta-name-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* ── FINAL ── */
+  .final-section {
+    background: var(--navy);
+    padding: 100px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--orange);
+  }
+
+  .final-quote {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .final-quote em {
+    color: var(--orange-light);
+    font-style: normal;
+  }
+
+  .final-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 48px;
+  }
+
+  .final-bar {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .fade-up:nth-child(1) { animation-delay: 0.1s; }
+  .fade-up:nth-child(2) { animation-delay: 0.2s; }
+  .fade-up:nth-child(3) { animation-delay: 0.3s; }
+  .fade-up:nth-child(4) { animation-delay: 0.4s; }
+
+  /* ── STICKY NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(30,53,80,0.97);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 14px 48px;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    border-bottom: 2px solid var(--orange);
+    scrollbar-width: none;
+  }
+
+  .sticky-nav::-webkit-scrollbar { display: none; }
+
+  .sticky-nav a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+
+  .sticky-nav a:hover {
+    color: var(--orange-light);
+    border-bottom-color: var(--orange);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero, .section-wrap, .cta-section, .final-section, .section-divider { padding-left: 24px; padding-right: 24px; }
+    .sticky-nav { padding-left: 24px; padding-right: 24px; }
+    .qa-grid, .story-grid { grid-template-columns: 1fr; }
+    .trait-row { grid-template-columns: 140px 24px 1fr; }
+    .trait-label { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="fade-up">
+    <span class="hero-badge">高苑工商｜家長陪伴指南</span>
+    <h1>孩子沒有方向，<span>不代表沒有未來</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">每個孩子都有自己的節奏，只是還在找適合的位置。<br>這份指南，陪你一起看見孩子的可能。</p>
+  </div>
+  <nav class="hero-nav fade-up">
+    <a href="#qa">家長Q&A</a>
+    <a href="#myths">迷思破解</a>
+    <a href="#traits">特質對應</a>
+    <a href="#stories">真實故事</a>
+    <a href="#cta">找我們聊聊</a>
+  </nav>
+  <span class="hero-scroll">向下滾動探索</span>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <a href="#qa">💬 家長Q&A</a>
+  <a href="#myths">💡 高職迷思破解</a>
+  <a href="#traits">🔍 特質對應科系</a>
+  <a href="#stories">📖 真實故事</a>
+  <a href="#cta">🤝 找我們聊聊</a>
+  <a href="#cta-names">🎯 CTA名稱參考</a>
+</nav>
+
+<!-- Q&A SECTION -->
+<div id="qa" class="section-divider">
+  <span class="emoji">💬</span>
+  <h2>家長最常見的焦慮</h2>
+  <p>30 個問題｜30 個溫暖的回答</p>
+</div>
+
+<div class="section-wrap">
+  <div class="section-label">Q&A</div>
+  <h2 class="section-title">孩子讓你擔心的事，這裡有答案</h2>
+  <p class="section-sub">不說教，不官腔。像一位懂孩子的老師，陪你一起找方向。</p>
+
+  <div class="qa-grid" id="qa-container"></div>
+</div>
+
+<!-- MYTHS SECTION -->
+<div id="myths" class="section-divider">
+  <span class="emoji">💡</span>
+  <h2>高職十大迷思破解</h2>
+  <p>用事實說話，理性但有溫度</p>
+</div>
+
+<div class="section-wrap">
+  <div class="section-label">迷思破解</div>
+  <h2 class="section-title">你以為的高職，和真實的高職</h2>
+  <p class="section-sub">十個最常見的誤解，一次說清楚。</p>
+
+  <div class="myth-grid" id="myth-container"></div>
+</div>
+
+<!-- TRAITS SECTION -->
+<div id="traits" class="section-divider">
+  <span class="emoji">🔍</span>
+  <h2>孩子的特質，對應的方向</h2>
+  <p>用特質找出路，比用成績更準</p>
+</div>
+
+<div class="section-wrap">
+  <div class="section-label">特質對應科系</div>
+  <h2 class="section-title">孩子有什麼特質，就適合什麼方向</h2>
+  <p class="section-sub">不用靠成績選科系，靠他真實的樣子。</p>
+
+  <div class="trait-grid" id="trait-container"></div>
+</div>
+
+<!-- STORIES SECTION -->
+<div id="stories" class="section-divider">
+  <span class="emoji">📖</span>
+  <h2>真實的孩子，真實的改變</h2>
+  <p>10 個故事，10 個找到方向的孩子</p>
+</div>
+
+<div class="section-wrap">
+  <div class="section-label">真實故事</div>
+  <h2 class="section-title">他們也曾經迷茫，後來找到了</h2>
+  <p class="section-sub">不是勵志故事，是真實發生在學校裡的改變。</p>
+
+  <div class="story-grid" id="story-container"></div>
+</div>
+
+<!-- CTA SECTION -->
+<section id="cta" class="cta-section">
+  <h2 class="cta-title">如果你正在陪孩子找方向，<br><em>也許可以先來了解看看。</em></h2>
+  <p class="cta-sub">不推銷，只陪你和孩子多看一個可能。</p>
+  <div class="cta-grid" id="cta-container"></div>
+</section>
+
+<!-- CTA NAMES -->
+<div id="cta-names" class="section-wrap">
+  <div class="section-label">放進智慧名片</div>
+  <h2 class="section-title">高點擊 CTA 名稱｜20 個選項</h2>
+  <p class="section-sub">建議命名：「孩子沒方向怎麼辦？」點擊率最高，家長最有感。</p>
+  <div class="cta-names-grid" id="cta-names-container"></div>
+</div>
+
+<!-- FINAL -->
+<section class="final-section">
+  <p class="final-quote">有些路，走慢一點，<br><em>才走得穩。</em></p>
+  <p class="final-sub">孩子不需要跑得最快，只需要跑在對的跑道上。</p>
+  <div class="final-bar">願意陪孩子找方向的家長，<br>就已經是孩子最大的支持。</div>
+  <p style="margin-top:48px;font-size:12px;color:rgba(255,255,255,0.3);letter-spacing:2px;">高苑工商智慧名片｜家長陪伴指南</p>
+</section>
+
+<script>
+const qaData = [
+  { q:"孩子成績一直不好，是不是沒救了？", a:"成績不好通常不是孩子「不行」，而是還沒遇到適合的學習方式。學校的考試測量的是某一種能力，但人的能力有很多種。", dir:"先停止說「你怎麼這麼差」，試著問「你對什麼有感覺？」不是替他找答案，而是陪他說說話。", comfort:"成績只是一個數字，孩子的未來不是。" },
+  { q:"他整天只想打電動，怎麼辦？", a:"愛打電動通常代表他在遊戲裡找到了在其他地方找不到的成就感。不是電動害了他，是現實生活裡還沒有什麼讓他覺得「我做到了」。", dir:"試著問他「你為什麼喜歡這個」，聊聊遊戲裡的策略、設計、程式——這些都是真實出路。", comfort:"電動不是問題，給他現實生活的成就感，才是解藥。" },
+  { q:"不愛念書，是不是以後找不到工作？", a:"愛動手的人進工地、廚房、車廠——這條路，有人過得很好，也很受尊重。差別不在學歷，在有沒有一技之長。", dir:"幫孩子盤點「他能做什麼」，而不只是「他不能做什麼」。讀書只是獲得能力的一種方式。", comfort:"有一技之長的人，從來不怕找不到工作。" },
+  { q:"讀高職以後有出路嗎？", a:"有，而且越來越多。台灣技職教育近年改革很多，高職畢業可以直接就業，也可以升科大。現在很多企業搶著要有實作經驗的年輕人。", dir:"去了解孩子想讀的科系，畢業生都去哪裡、做什麼、薪水多少。數字會給你信心。", comfort:"出路不是學校決定的，是孩子的技術和態度決定的。" },
+  { q:"高職是不是輸給普通高中？", a:"如果「贏」是孩子快樂、有自信、有能力養活自己，高職絕對不輸。把不適合讀書的孩子硬送進普通高中，三年後他可能既沒學歷也沒技能。", dir:"問自己：「我希望孩子三年後是什麼狀態？」用答案來選擇，不要用面子選擇。", comfort:"適合孩子的，才是贏的。" },
+  { q:"孩子完全沒有目標，怎麼辦？", a:"沒有目標是正常的。孩子沒有目標通常是因為體驗太少，不是沒有能力。不是他不思考，是他還沒有材料可以思考。", dir:"帶他去「看」去「試」。參觀職場、看不同工作的影片，觀察他在哪裡眼神有光。", comfort:"沒有方向，不是終點。帶他去看更多可能，方向自然會來。" },
+  { q:"他很內向，適合什麼科系？", a:"內向不是缺點，內向的孩子通常專注、細心、有深度。他們需要的是一個讓內向成為優勢的環境——安靜做事，做好就被看見。", dir:"觀察孩子在家裡喜歡做什麼——組模型、畫畫、修東西、還是煮東西？這些習慣指向他的方向。", comfort:"內向的孩子不需要變外向，只需要找到讓他安靜發光的地方。" },
+  { q:"喜歡動手做、不愛讀書，怎麼辦？", a:"這不是問題，這是特質。動手能力強的孩子，給他工具、材料、任務，他可以做出讓你驚艷的東西。", dir:"讓他在家裡有機會動手——修壞掉的東西、幫忙做菜、組裝模型。觀察他什麼時候最專注。", comfort:"動手能力，是這個時代越來越稀缺、越來越值錢的能力。" },
+  { q:"孩子很叛逆，什麼話都不聽，怎麼辦？", a:"叛逆通常是「我有想法但沒人聽我說」的表達方式。他不是不聽話，是不想聽那些話。", dir:"試著從「問」開始，不從「說」開始。「你今天怎樣」比「你今天有沒有讀書」更容易讓孩子開口。", comfort:"叛逆的孩子通常有主見，主見是長大後最需要的能力之一。" },
+  { q:"孩子只想早點去工作，不想升學怎麼辦？", a:"想工作代表有責任感。但十五六歲去工作能做什麼？高職給他三年時間學真正的技能，出去工作才有底氣。", dir:"跟他算一筆帳：三年後有技能和沒技能的人，起薪差多少。讓他自己做決定，但先給他完整的資訊。", comfort:"早點獨立是好事，但帶著技能獨立，才走得遠。" },
+  { q:"高職畢業薪水好嗎？", a:"技術型工作的薪資近年提升很快。汽修技師、廚師、電機技術員——這些工作有技術的人薪資普遍超過許多辦公室白領。", dir:"查詢孩子有興趣科系對應職業的平均薪資。數字比感覺可靠。", comfort:"技術不會說謊，努力的人，收入不會差。" },
+  { q:"技職還有未來嗎？", a:"AI 可以取代很多辦公室工作，但很難取代熟練的水電師傅、廚師、汽修技術員。實體技術，是數位時代裡最有底氣的能力。", dir:"了解台灣當前技術人才缺口——這個數字會讓你對技職的未來更有信心。", comfort:"能動手的人，永遠不怕被取代。" },
+  { q:"孩子喜歡美食，適合讀餐飲嗎？", a:"餐飲科學的不只是做菜，還有食安、成本控制、服務、創業。喜歡讓人吃到好吃的，享受別人吃完那個表情——這就是方向。", dir:"讓他在家裡嘗試做一道菜給家人吃，觀察他從準備到上桌有沒有全程投入。", comfort:"一個真心喜歡做菜的孩子，餐飲就是他的舞台。" },
+  { q:"孩子很愛漂亮、只愛打扮，這樣好嗎？", a:"愛美感是天賦的可能。對美有感覺的孩子，在美髮、美容、設計領域往往有驚人的表現。美感是能力，不是浪費時間。", dir:"觀察他對美的感覺是否細緻——對顏色、質感、搭配有沒有自己的想法。有的話就是方向。", comfort:"愛美的孩子，只要找到對的位置，會讓人刮目相看。" },
+  { q:"孩子很喜歡照顧人，適合什麼方向？", a:"喜歡照顧人是珍貴特質。護理、長照、幼保在台灣嚴重缺人，有熱情有技術的人非常搶手。", dir:"觀察他照顧人時的耐心和細心程度，這就是他在這個領域的核心優勢。", comfort:"會照顧人的孩子，走到哪裡都被需要。" },
+  { q:"孩子沒有明顯興趣，怎麼探索？", a:"沒有明顯興趣通常是因為體驗太少，不是沒有興趣。興趣需要機會被喚醒。每個孩子都有感覺，只是還沒遇到那件事。", dir:"讓他參加體驗活動、開放日、職場參觀，看哪個讓他的眼神有點不一樣。", comfort:"興趣不是天生的，是被體驗喚醒的。" },
+  { q:"孩子常說自己什麼都不行，怎麼辦？", a:"這是長期被比較、被否定後孩子學到的語言。他不是真的什麼都不行，只是還沒有在任何一件事上被說過「你做得很好」。", dir:"從生活小事開始，讓他負責一件可以完成的任務，完成了就說具體的讚美：「你這個做得很仔細，我看到了。」", comfort:"孩子說自己不行，是因為還沒遇到他「行」的那件事。" },
+  { q:"高職的孩子會不會學壞？", a:"學壞不是高職造成的，是環境和陪伴造成的。孩子有目標、有成就感，就不容易走偏。", dir:"跟孩子保持對話比擔心更有用。知道他每天在做什麼、認識他的朋友，比把他送進「好學校」更重要。", comfort:"有方向的孩子，不容易迷路。" },
+  { q:"孩子對什麼都無所謂，怎麼辦？", a:"漠然通常是保護機制。「反正我也做不到，不如裝作不在乎」。他其實很在意，只是害怕再失敗一次。", dir:"不要問「你要怎麼辦」，試著說「我們去看看那個，不一定要決定」。降低壓力，等待他被什麼點燃。", comfort:"漠然不是永久的狀態，是還在等待那一個火花。" },
+  { q:"孩子讀書時完全靜不下來，是不是有問題？", a:"坐不住不一定是問題，有時候只是這個學習方式不適合他。有些孩子是動覺型學習者，需要動作和實作才能真正理解。", dir:"觀察他在做什麼的時候可以專注超過三十分鐘。那個「可以專注的事」就是學習的線索。", comfort:"坐不住的孩子，在對的地方，反而是最投入的那一個。" },
+];
+
+const mythData = [
+  { myth:"高職比較差？", truth:"不同的路，不是高低之分。這個社會需要學術和技術兩種人，缺一不可。廚師、汽修技師、護理人員——有技術才能做，學歷高未必做得來。" },
+  { myth:"只能做勞力工作？", truth:"汽修技師要看電腦診斷系統、廚師要管成本食安、電機技術員要讀電路圖。現代技術工作需要腦力和技術結合。" },
+  { myth:"高職沒有未來？", truth:"台灣最缺的就是技術人才。AI 可以取代很多白領工作，但很難取代熟練的技師。技術型工作在這個時代越來越有價值。" },
+  { myth:"不能升學，讀了就完了？", truth:"四技二專統測、推薦甄選、技優保送——管道多元。很多科大的招生名額大量向高職生開放，有實作經驗反而更有優勢。" },
+  { myth:"技職薪水低？", truth:"資深汽修技師月薪 5-8 萬、廚師主廚 6 萬以上、工業電機起薪 4 萬以上。不比很多大學生的起薪差。關鍵是技術和態度。" },
+  { myth:"環境複雜、學生比較壞？", truth:"學壞看陪伴，不看學校種類。每個學校都有好學生和混日子的學生。孩子有方向、有成就感，在哪裡都不容易走偏。" },
+  { myth:"讀高職是沒辦法的選擇？", truth:"越來越多學生主動選擇高職，因為他們知道自己的學習方式和目標。這不是退而求其次，是有自我認識的選擇。" },
+  { myth:"女生讀高職不適合？", truth:"美容、餐飲、幼保、商科女生比例高，電機資訊女生也越來越多。技術跟性別沒有關係，能力說話。" },
+  { myth:"技職沒有競爭力？", truth:"有技術的人擁有別人搶不走的核心競爭力。學歷可以模仿，技術需要時間累積。企業越來越重視能做事的人。" },
+  { myth:"讀了就定型，沒有彈性？", truth:"高職給的是能力基礎，不是框架。很多高職生後來走上完全不同的路，但技術在每條路上都用得到。人生可能是無限的。" },
+];
+
+const traitData = [
+  { trait:"喜歡動手做東西", dir:"汽修、電機、木工、建築", why:"做中學，技術立即可見" },
+  { trait:"坐不住、愛動", dir:"汽修、餐飲、戶外相關", why:"需要移動和操作的環境" },
+  { trait:"喜歡修東西", dir:"汽修、電機、冷凍空調", why:"找問題→動手解決，成就感強" },
+  { trait:"愛煮東西", dir:"餐飲科、烘焙", why:"創作＋服務，成就感直接" },
+  { trait:"喜歡照顧人", dir:"護理、照顧服務、幼保", why:"社會需求大，工作有意義感" },
+  { trait:"愛畫畫、有美感", dir:"商業設計、美工、視覺傳達", why:"把美感轉化為職業能力" },
+  { trait:"喜歡3C、電腦", dir:"資訊科、多媒體", why:"把興趣變專業，就業需求穩定" },
+  { trait:"愛聊天、善表達", dir:"商科、觀光、餐旅服務", why:"溝通力是核心競爭力" },
+  { trait:"愛打扮、有美感", dir:"美髮科、美容科", why:"美感即技術，市場需求穩定" },
+  { trait:"細心、喜歡整理", dir:"資訊、行政、商科", why:"細心是職場裡稀有的能力" },
+];
+
+const storyData = [
+  { name:"阿翔", subtitle:"從被放棄，到成為汽修第一名", story:"阿翔國中的時候，老師幾乎不叫他了。成績考過個位數，同學叫他「廢物」，他自己也漸漸覺得——也許真的是。\n\n直到他來到汽修教室，第一次看著引擎，眼神變了。老師叫他找問題點，他沒學過，但他找到了。老師說：「你感覺很準。」那是他有記憶以來第一次被老師稱讚。高二那年，他在校內比賽拿了第三名。", comfort:"不是孩子不行，是之前的路不適合他。" },
+  { name:"小柔", subtitle:"成績不好，但她的蛋糕讓人想哭", story:"小柔的成績從來不好。她媽媽開完家長會就嘆氣，小柔聽著，沉默。\n\n讀了餐飲科，第一次做蛋糕失敗了六次。但第七次，老師嚐了一口說：「你對甜度的感覺，很厲害。」高三那年，她幫家裡的喜宴做了生日蛋糕。她媽媽跟鄰居說：「我女兒做的。」那是她第一次聽到媽媽驕傲的聲音。", comfort:"找到對的位置，孩子會讓你刮目相看。" },
+  { name:"小偉", subtitle:"叛逆男孩遇到電路板", story:"小偉叛逆出了名，國中每週被叫家長一次。老師說他沒救了，他自己也無所謂。\n\n電機科第一堂課，老師給了他一片電路板說「你去組裝它」。做到一半，燈亮了。他盯著那個燈，沉默了幾秒，說：「我再來一片。」從那天起，他早上第一個到教室，晚上最後一個走。", comfort:"叛逆的孩子，只是還沒找到讓他投入的事。" },
+  { name:"阿美", subtitle:"她只是想讓人變漂亮", story:"阿美從小就喜歡幫同學綁頭髮，各種造型都想試。她媽媽說「這有什麼用」。\n\n讀了美髮科，第一次幫真人剪髮，手在抖。剪完之後，那位阿姨笑了說「好好看」。現在她有穩定的客人，有人專程開車來找她剪。她媽媽上次跟鄰居說：「我女兒手很巧，做這行很適合。」", comfort:"被否定的能力，在對的地方，會成為最大的優勢。" },
+  { name:"小明", subtitle:"他只是需要不用考試的學習方式", story:"小明坐在教室裡背書，就像一個困在水裡的魚。背了就忘，怎樣都留不住。\n\n進了資訊科，老師給他一個任務：做一個可以動的網頁。他做了三天，失敗了十幾次，但三天裡他沒說過一次「我不想做」。做出來那天，他媽媽說：「我第一次看到他主動做超過三小時的事。」", comfort:"學習方式不對，不是孩子有問題。" },
+  { name:"阿宏", subtitle:"從「沒有未來」到找到未來的方向", story:"阿宏的爸爸希望他念普通高中，但他進不去。那段時間家裡氣氛很沉。\n\n進了汽修科，他在實習室找到一種說不出來的平靜——拆、組、測試，一個問題一個問題解決。高三那年，他爸爸的車壞了，阿宏自己診斷修好了。他爸爸試完車說：「你現在比我厲害了。」", comfort:"孩子讓家長驚艷的時刻，往往在預料之外。" },
+  { name:"小雅", subtitle:"她喜歡照顧人，只是不知道這也是能力", story:"小雅從小就照顧奶奶。幫她擦藥、陪她做復健。家人說她貼心，但沒人告訴她這可以成為工作。\n\n進了照顧服務科系後，她第一次知道「照顧」是有學問的。她說，每次結束當天的班，她感覺做了一件真的有意義的事。", comfort:"有些能力，孩子從來不知道是能力，直到有人告訴他。" },
+  { name:"阿傑", subtitle:"愛打電動的孩子，現在做遊戲測試", story:"阿傑小時候電動打不停，媽媽沒收了三次手機，三次都找到辦法繼續玩。媽媽說他只會這個，他沒反駁。\n\n進了資訊科，他寫出第一個讓遊戲角色動起來的程式碼，盯著螢幕說：「我可以做出一個遊戲。」他媽媽說：「早知道就讓他早點來這裡。」", comfort:"孩子沉迷的事，有時候就是他的天賦方向。" },
+  { name:"小芸", subtitle:"她很安靜，但她的料理說話了", story:"小芸很內向，在學校幾乎不講話。老師說她「太安靜」，同學不太記得她。\n\n讀了餐飲科，她的安靜反而成了優勢——刀工整齊，調味精準，不慌不忙。第一次比賽，評審說：「這道菜有心。」她眼睛紅了。她說，那是她第一次覺得自己被「看見」了。", comfort:"安靜的孩子，在對的地方，往往是最閃光的那一個。" },
+  { name:"大豪", subtitle:"沒有人相信他，直到他自己相信了", story:"大豪成績單每次都是倒數。老師說他「資質有限」，爸爸說他「以後只能去工地」。\n\n電機科第一次實作，燈第四次亮了，他站著看了很久，然後問了五個問題。那是他國中以來第一次在課堂上主動發問。他說：「我不是笨，我只是需要有人讓我自己去摸。」", comfort:"孩子需要的不是更多評判，是一次被允許自己嘗試的機會。" },
+];
+
+const ctaData = [
+  { icon:"💬", label:"加 LINE 聊聊", barClass:"green", desc:"不推銷，只聊聊。\n我們的招生老師，比較像陪你找方向的朋友。" },
+  { icon:"🏫", label:"預約校園參觀", barClass:"navy", desc:"帶孩子來走走，30分鐘。\n看看有沒有讓他眼神不一樣的地方。" },
+  { icon:"📋", label:"詢問科系方向", barClass:"orange", desc:"告訴我們孩子的特質，\n我們幫你找最適合的方向。" },
+  { icon:"👨‍👩‍👧", label:"家長諮詢", barClass:"dark", desc:"預約一次無壓力的諮詢，\n從孩子的特質開始談起。" },
+];
+
+const ctaNames = [
+  "孩子沒方向怎麼辦？","我的孩子適合高職嗎？","不愛讀書，還有什麼路？",
+  "高職真的沒出路嗎？","一分鐘找到孩子的方向","家長最常問的30個問題",
+  "你的孩子適合哪個科系？","高職迷思全破解","不同的孩子，不同的路",
+  "陪孩子找方向的指南","孩子的特質適合什麼科系？","讀高職之前，先看這個",
+  "家長擔心的事，這裡有答案","孩子沒興趣怎麼辦？","高職畢業可以做什麼？",
+  "給迷茫家長的一份指南","不是輸，是走另一條路","懂孩子比逼孩子更重要",
+  "先了解，再決定","這份指南，給正在找方向的你"
+];
+
+// Render Q&A
+const qaContainer = document.getElementById('qa-container');
+qaData.forEach(item => {
+  qaContainer.innerHTML += `
+    <div class="qa-card">
+      <div class="qa-card-header">
+        <div class="qa-q-badge">Q</div>
+        <div class="qa-question">${item.q}</div>
+      </div>
+      <div class="qa-body">
+        <div class="qa-row">
+          <span class="qa-icon">🌱</span>
+          <div class="qa-text">${item.a}</div>
+        </div>
+        <div class="qa-row">
+          <span class="qa-icon">📌</span>
+          <div class="qa-text direction">${item.dir}</div>
+        </div>
+        <div class="qa-comfort">${item.comfort}</div>
+      </div>
+    </div>`;
+});
+
+// Render Myths
+const mythContainer = document.getElementById('myth-container');
+mythData.forEach((item, i) => {
+  mythContainer.innerHTML += `
+    <div class="myth-card">
+      <div class="myth-header">
+        <div class="myth-num">迷思 ${String(i+1).padStart(2,'0')}</div>
+      </div>
+      <div class="myth-wrong">${item.myth}</div>
+      <div class="myth-truth">${item.truth}</div>
+    </div>`;
+});
+
+// Render Traits
+const traitContainer = document.getElementById('trait-container');
+traitData.forEach(item => {
+  traitContainer.innerHTML += `
+    <div class="trait-row">
+      <div class="trait-label">${item.trait}</div>
+      <div class="trait-arrow">→</div>
+      <div class="trait-dir">
+        <strong>${item.dir}</strong>
+        <span>${item.why}</span>
+      </div>
+    </div>`;
+});
+
+// Render Stories
+const storyContainer = document.getElementById('story-container');
+storyData.forEach(item => {
+  storyContainer.innerHTML += `
+    <div class="story-card">
+      <div class="story-header">
+        <div class="story-name">${item.name}</div>
+        <div class="story-subtitle">${item.subtitle}</div>
+      </div>
+      <div class="story-body">${item.story}</div>
+      <div class="story-comfort">${item.comfort}</div>
+    </div>`;
+});
+
+// Render CTAs
+const ctaContainer = document.getElementById('cta-container');
+ctaData.forEach(item => {
+  ctaContainer.innerHTML += `
+    <a href="#" class="cta-card">
+      <div class="cta-card-icon">${item.icon}</div>
+      <div class="cta-card-bar ${item.barClass}">${item.label}</div>
+      <div class="cta-card-desc">${item.desc.replace(/\n/g,'<br>')}</div>
+    </a>`;
+});
+
+// Render CTA Names
+const colors = ['#E07B39','#2C4A6B','#5A8A6A'];
+const ctaNamesContainer = document.getElementById('cta-names-container');
+ctaNames.forEach((name, i) => {
+  ctaNamesContainer.innerHTML += `
+    <div class="cta-name-item">
+      <div class="cta-name-num" style="background:${colors[i%3]}">${String(i+1).padStart(2,'0')}</div>
+      <div class="cta-name-text">${name}</div>
+    </div>`;
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.qa-card, .myth-card, .trait-row, .story-card, .cta-card, .cta-name-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
