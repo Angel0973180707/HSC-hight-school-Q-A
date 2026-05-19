@@ -742,7 +742,7 @@
   <a href="#traits">🔍 特質對應科系</a>
   <a href="#stories">📖 真實故事</a>
   <a href="#cta">🤝 找我們聊聊</a>
-  <a href="#cta-names">🎯 CTA名稱參考</a>
+  
 </nav>
 
 <!-- Q&A SECTION -->
@@ -807,18 +807,20 @@
 
 <!-- CTA SECTION -->
 <section id="cta" class="cta-section">
-  <h2 class="cta-title">如果你正在陪孩子找方向，<br><em>也許可以先來了解看看。</em></h2>
+  <h2 class="cta-title">如果你正在陪孩子找方向，<br><em>也許可以先來聊聊。</em></h2>
   <p class="cta-sub">不推銷，只陪你和孩子多看一個可能。</p>
-  <div class="cta-grid" id="cta-container"></div>
+  <div style="display:flex;justify-content:center;margin-top:16px;">
+    <a href="https://line.me/ti/p/~0981661500" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;gap:16px;background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.15);border-radius:20px;padding:40px 60px;text-decoration:none;transition:all 0.3s;max-width:320px;width:100%;" onmouseover="this.style.background='rgba(90,138,106,0.25)';this.style.borderColor='#5A8A6A'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.15)'">
+      <div style="font-size:48px;">💬</div>
+      <div style="background:#5A8A6A;color:#fff;padding:10px 32px;border-radius:30px;font-size:15px;font-weight:700;letter-spacing:1px;">加 LINE 聊聊</div>
+      <div style="text-align:center;color:rgba(255,255,255,0.6);font-size:13px;line-height:1.8;">
+        不推銷，只聊聊。<br>
+        <strong style="color:rgba(255,255,255,0.85);">潘品存老師</strong><br>
+        LINE ID：0981661500
+      </div>
+    </a>
+  </div>
 </section>
-
-<!-- CTA NAMES -->
-<div id="cta-names" class="section-wrap">
-  <div class="section-label">放進智慧名片</div>
-  <h2 class="section-title">高點擊 CTA 名稱｜20 個選項</h2>
-  <p class="section-sub">建議命名：「孩子沒方向怎麼辦？」點擊率最高，家長最有感。</p>
-  <div class="cta-names-grid" id="cta-names-container"></div>
-</div>
 
 <!-- FINAL -->
 <section class="final-section">
@@ -891,22 +893,7 @@ const storyData = [
   { name:"大豪", subtitle:"沒有人相信他，直到他自己相信了", story:"大豪成績單每次都是倒數。老師說他「資質有限」，爸爸說他「以後只能去工地」。\n\n電機科第一次實作，燈第四次亮了，他站著看了很久，然後問了五個問題。那是他國中以來第一次在課堂上主動發問。他說：「我不是笨，我只是需要有人讓我自己去摸。」", comfort:"孩子需要的不是更多評判，是一次被允許自己嘗試的機會。" },
 ];
 
-const ctaData = [
-  { icon:"💬", label:"加 LINE 聊聊", barClass:"green", desc:"不推銷，只聊聊。\n我們的招生老師，比較像陪你找方向的朋友。" },
-  { icon:"🏫", label:"預約校園參觀", barClass:"navy", desc:"帶孩子來走走，30分鐘。\n看看有沒有讓他眼神不一樣的地方。" },
-  { icon:"📋", label:"詢問科系方向", barClass:"orange", desc:"告訴我們孩子的特質，\n我們幫你找最適合的方向。" },
-  { icon:"👨‍👩‍👧", label:"家長諮詢", barClass:"dark", desc:"預約一次無壓力的諮詢，\n從孩子的特質開始談起。" },
-];
 
-const ctaNames = [
-  "孩子沒方向怎麼辦？","我的孩子適合高職嗎？","不愛讀書，還有什麼路？",
-  "高職真的沒出路嗎？","一分鐘找到孩子的方向","家長最常問的30個問題",
-  "你的孩子適合哪個科系？","高職迷思全破解","不同的孩子，不同的路",
-  "陪孩子找方向的指南","孩子的特質適合什麼科系？","讀高職之前，先看這個",
-  "家長擔心的事，這裡有答案","孩子沒興趣怎麼辦？","高職畢業可以做什麼？",
-  "給迷茫家長的一份指南","不是輸，是走另一條路","懂孩子比逼孩子更重要",
-  "先了解，再決定","這份指南，給正在找方向的你"
-];
 
 // Render Q&A
 const qaContainer = document.getElementById('qa-container');
@@ -972,27 +959,6 @@ storyData.forEach(item => {
     </div>`;
 });
 
-// Render CTAs
-const ctaContainer = document.getElementById('cta-container');
-ctaData.forEach(item => {
-  ctaContainer.innerHTML += `
-    <a href="#" class="cta-card">
-      <div class="cta-card-icon">${item.icon}</div>
-      <div class="cta-card-bar ${item.barClass}">${item.label}</div>
-      <div class="cta-card-desc">${item.desc.replace(/\n/g,'<br>')}</div>
-    </a>`;
-});
-
-// Render CTA Names
-const colors = ['#E07B39','#2C4A6B','#5A8A6A'];
-const ctaNamesContainer = document.getElementById('cta-names-container');
-ctaNames.forEach((name, i) => {
-  ctaNamesContainer.innerHTML += `
-    <div class="cta-name-item">
-      <div class="cta-name-num" style="background:${colors[i%3]}">${String(i+1).padStart(2,'0')}</div>
-      <div class="cta-name-text">${name}</div>
-    </div>`;
-});
 
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
